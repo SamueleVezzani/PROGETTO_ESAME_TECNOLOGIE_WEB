@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgendaSolidaleModena - Registrazione</title>
+
+    <!-- Collegamento al foglio di stile CSS -->
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <!-- Intestazione della pagina o navigazione -->
+        <h1>Benvenuto su AgendaSolidaleModena</h1>
+    </header>
+
+    <main>
+        <!-- Contenuto principale della pagina -->
+        <form id="RegisterForm" action="register.html" method="POST">
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" name="name" placeholder="es. Mario" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="secondName">Cognome</label>
+                    <input type="text" id="secondName" name="secondName" placeholder="es. Rossi" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="phoneNumber">Numero di telefono</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="es. 333 1234567" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Indirizzo email</label>
+                <input type="email" id="email" name="email" placeholder="es. mario.rossi@email.it" required>
+            </div>
+
+            <div class="form-group">
+                <label for="birthDate">Data di nascita</label>
+                <input type="date" id="birthDate" name="birthDate" required>
+            </div>
+
+            <div class="form-group">
+                <label for="municipality">Comune di residenza</label>
+                <select id="municipality" name="municipality" class="form-select" required>
+                    <option value="" disabled selected>Seleziona il comune...</option>
+                    <option value="Modena">Modena</option>
+                    <option value="Baggiovara">Baggiovara</option>
+                    <option value="Maranello">Maranello</option>
+                    <option value="Formigine">Formigine</option>
+                    <option value="Soliera">Soliera</option>
+                    <option value="Campogalliano">Campogalliano</option>
+                    <option value="Nonantola">Nonantola</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Minimo 8 caratteri" required>
+            </div>
+
+            <!-- Nuovo campo Conferma Password -->
+            <div class="form-group">
+                <label for="confirmPassword">Conferma Password</label>
+                <input type="password" id="confirmPassword" name="confirm_password" placeholder="Ripeti la password"
+                    required>
+            </div>
+
+            <button type="submit">Registrati</button>
+        </form>
+    </main>
+
+    <footer>
+        <!-- Piè di pagina -->
+    </footer>
+
+    <!-- Collegamento allo script JavaScript -->
+    <script type="JavaScript" src="../static/javascript/main.js"></script>
+</body>
+
+</html>

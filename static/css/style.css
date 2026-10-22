@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;
+    color: #2c3e50;
+    /* Flexbox per centrare la scheda nella pagina */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Flexbox per il form principale */
+#RegisterForm {
+    display: flex;
+    flex-direction: column;
+    /* Incolonna gli elementi uno sotto l'altro */
+    gap: 16px;
+    /* Spazio automatico e uniforme tra i campi */
+
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 520px;
+    padding: 35px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e9ecef;
+}
+
+#RegisterForm h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #1a365d;
+    font-size: 24px;
+}
+
+/* Riga per affiancare più campi (es. Nome e Cognome) */
+.form-row {
+    display: flex;
+    gap: 15px;
+    /* Spazio tra le due colonne */
+}
+
+/* Flexbox nei singoli gruppi */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    /* Permette ai campi nella stessa riga di occupare uguale spazio */
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #4a5568;
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 11px 14px;
+    font-size: 15px;
+    color: #2d3748;
+    background-color: #f8fafc;
+    border: 1.5px solid #cbd5e0;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    background-color: #ffffff;
+    border-color: #3182ce;
+    box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.2);
+}
+
+button[type="submit"] {
+    padding: 14px;
+    margin-top: 10px;
+    background-color: #2b6cb0;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #2c5282;
+}
+
+/* Su schermi piccoli (smartphone), impila Nome e Cognome verticalmente */
+@media (max-width: 480px) {
+    .form-row {
+        flex-direction: column;
+        gap: 16px;
+    }
+}
